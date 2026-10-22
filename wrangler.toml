@@ -1,0 +1,23 @@
+name = "victorymarine"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+# Database for customers, units, jobs, parts and check-ins.
+# Create it in Cloudflare: Storage & Databases > D1 > Create, name it victory-marine,
+# then copy its Database ID and paste it below.
+[[d1_databases]]
+binding = "DB"
+database_name = "victory-marine"
+database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+
+# Photo storage. Create it in Cloudflare: R2 > Create bucket, name it victory-marine-photos.
+# Not ready for photos yet? Put a # in front of the next three lines and the app works without them.
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "victory-marine-photos"
+
+[observability]
+enabled = true
+
+# The shop password is NOT set here. After the first deploy, add it in Cloudflare:
+# your Worker > Settings > Variables and Secrets > Add > Secret, named SHOP_PASSWORD.
