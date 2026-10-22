@@ -12,9 +12,9 @@ database_id = "d40b24ba-5f05-4483-b2ec-d54ffdcf6f2c"
 
 # Photo storage. Create it in Cloudflare: R2 > Create bucket, name it victory-marine-photos.
 # Not ready for photos yet? Put a # in front of the next three lines and the app works without them.
-[[r2_buckets]]
-binding = "PHOTOS"
-bucket_name = "victory-marine-photos"
+# [[r2_buckets]]
+# binding = "PHOTOS"
+# bucket_name = "victory-marine-photos"
 
 [observability]
 enabled = true
